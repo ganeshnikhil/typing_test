@@ -5,6 +5,7 @@ This is a simple typing game implemented in Pygame where you can practice your t
 
 ## Table of Contents
 - [Getting Started](#getting-started)
+- [Directory Structure](#directory-structure)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -16,6 +17,19 @@ This is a simple typing game implemented in Pygame where you can practice your t
 ## Getting Started
 
 Follow the instructions below to get the game up and running on your local machine.
+
+### Directory Structure
+
+The project directory is structured as follows:
+
+- **cmu**: This directory contains the font file used for rendering text in the game. It includes `.ttf` files.
+
+- **sound**: Here, you'll find sound files used in the game, such as keyboard keypress sounds and error beep sounds.
+
+- **typing_set**: This directory holds text files that contain various sentences and paragraphs you can type during the game.
+
+- **main.py**: The main Python script (`main.py`) is the entry point for the game. It contains the game logic, including the game loop, user interface, and typing functionality.
+
 
 ### Prerequisites
 
@@ -33,13 +47,13 @@ pip install -r requirements.txt
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/typing-game.git
+https://github.com/ganeshnikhil/typing_test.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd typing-game
+cd typing_text
 ```
 
 ## Usage
@@ -47,7 +61,7 @@ cd typing-game
 To start the game, run the following command:
 
 ```bash
-python typing_game.py
+python main.py
 ```
 
 ## How to Play
@@ -86,3 +100,88 @@ Contributions are welcome! If you would like to contribute to the project, pleas
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## Functions in `main.py`
+
+### `play_wav_file_with_no_lag(filename)`
+
+Plays a WAV file with minimal lag using the `pygame.mixer` module.
+
+- Args:
+  - `filename`: The path to the WAV file.
+
+### `render_button()`
+
+Renders the start button on the screen at the beginning of the game.
+
+- Returns:
+  - `button_surface`: A Pygame surface object representing the button.
+  - `button_rect`: A Pygame rectangle object representing the button's position and size.
+
+### `text_pointer(coordinates)`
+
+Draws a transparent rectangle at the given coordinates on the screen.
+
+- Args:
+  - `coordinates`: A Pygame rectangle object representing the coordinates.
+
+### `manage_text_placing(text, max_width)`
+
+Formats the text to fit the screen's width, wrapping it as necessary.
+
+- Args:
+  - `text`: The text to format.
+  - `max_width`: The maximum width allowed for the text.
+
+- Returns:
+  - `rapped_word`: The formatted text.
+
+### `text_render(text)`
+
+Renders the text on the screen by breaking it into individual characters.
+
+- Args:
+  - `text`: The text to render.
+
+### `render_on_screen(text_coordinates)`
+
+Renders the typing text on the screen.
+
+- Args:
+  - `text_coordinates`: A list of text, rectangle, and letter data.
+
+### `render_typing_speed(timer, text)`
+
+Calculates and renders the typing speed on the screen.
+
+- Args:
+  - `timer`: The elapsed time since typing started.
+  - `text`: The typed text.
+
+### `render_accuracy(text, right_characters)`
+
+Calculates and renders the typing accuracy on the screen.
+
+- Args:
+  - `text`: The original text.
+  - `right_characters`: The count of correctly typed characters.
+
+### `load_text_file(filepath)`
+
+Loads the typing data from a text file.
+
+- Args:
+  - `filepath`: The path to the text file.
+
+- Returns:
+  - `lines`: A list of lines from the text file.
+
+### Main Game Loop
+
+The main game loop in `main.py` handles user input, text typing, and game state management. It initializes the game, listens for key presses, updates the screen, and calculates typing speed and accuracy.
+
+### Installation and Gameplay
+
+Refer to the installation and gameplay instructions provided above in the README for details on how to set up and play the Typing Game.
+
