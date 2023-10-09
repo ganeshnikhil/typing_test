@@ -1,7 +1,7 @@
 # typing_test
 # Typing Game in Pygame
 
-![main_screen](https://github.com/ganeshnikhil/typing_test/blob/main/shot.png)
+! [main_screen] (https://github.com/ganeshnikhil/typing_test/blob/main/shot.png)
 
 This is a simple typing game implemented in Pygame where you can practice your typing skills. The game loads text from a file, and your goal is to type the displayed text as accurately and quickly as possible.
 
