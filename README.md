@@ -1,7 +1,7 @@
 # typing_test
 # Typing Game in Pygame
 \\
-![main_screen](https://github.com/ganeshnikhil/typing_test/blob/main/shot.png)
+![main_screen](shot.png)
 ![Image alt text](https://github.com/ganeshnikhil/typing_test/blob/main/second_shot.png?width=200&height=100)
 \\
 
