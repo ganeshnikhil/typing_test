@@ -2,7 +2,7 @@ import pygame
 from pygame import mixer
 from  random import choice 
 import textwrap
-import time 
+
 
 pygame.init()
 mixer.init()
